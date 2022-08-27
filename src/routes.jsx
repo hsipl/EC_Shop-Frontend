@@ -1,11 +1,11 @@
-import { Layout } from "./pages/Layout";
+import { BasicLayout } from "./pages/BasicLayout";
 import { PageA } from "./pages/PageA";
 import { PageB } from "./pages/PageB";
 
 export const routes = [
   {
     path: "/",
-    element: <Layout />,
+    element: <BasicLayout />,
     children: [
       { index: true, element: <PageA /> },
       { path: "a", element: <PageA /> },
