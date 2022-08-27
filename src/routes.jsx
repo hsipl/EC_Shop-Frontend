@@ -1,6 +1,6 @@
-import { BasicLayout } from "./pages/BasicLayout";
-import { PageA } from "./pages/PageA";
-import { PageB } from "./pages/PageB";
+import { BasicLayout } from "@/pages/BasicLayout";
+import { PageA } from "@/pages/PageA";
+import { PageB } from "@/pages/PageB";
 
 export const routes = [
   {
