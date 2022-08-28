@@ -1,6 +1,8 @@
+import { selectErrors, setPassword, setUsername } from "@/store/login";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Typography } from "antd";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./Login.css";
 
 export default function Login() {
@@ -8,46 +10,39 @@ export default function Login() {
     console.log("Received values of form: ", values);
   };
 
+  const errors = useSelector(selectErrors);
+
+  const dispatch = useDispatch();
+  const usernameChanged = (e) => dispatch(setUsername(e.target.value));
+  const passwordChanged = (e) => dispatch(setPassword(e.target.value));
+
   return (
     <div className="root">
       <Typography.Title style={{ color: "#fff" }}>Sign In</Typography.Title>
-      <Form
-        name="normal_login"
-        className="form-box"
-        initialValues={{
-          remember: true,
-        }}
-        onFinish={onFinish}
-      >
+      <Form name="normal_login" className="form-box" onFinish={onFinish}>
         <Form.Item
           name="username"
-          rules={[
-            {
-              required: true,
-              message: "Please input your Username!",
-            },
-          ]}
+          validateStatus={errors.username ? "error" : "success"}
+          help={errors.username}
         >
           <Input
             prefix={<UserOutlined className="site-form-item-icon" />}
             placeholder="Username"
             style={{ borderRadius: "5px" }}
+            onChange={usernameChanged}
           />
         </Form.Item>
         <Form.Item
           name="password"
-          rules={[
-            {
-              required: true,
-              message: "Please input your Password!",
-            },
-          ]}
+          validateStatus={errors.password ? "error" : "success"}
+          help={errors.password}
         >
           <Input
             prefix={<LockOutlined className="site-form-item-icon" />}
             type="password"
             placeholder="Password"
             style={{ borderRadius: "5px" }}
+            onChange={passwordChanged}
           />
         </Form.Item>
         <div style={{ width: "100%", textAlign: "right" }}>
