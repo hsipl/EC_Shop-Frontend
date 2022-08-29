@@ -1,0 +1,26 @@
+.root {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+
+  background: #093545;
+  background-color: #093545;
+  background-image: url(@/assets/SignInWave.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.form-box {
+  min-width: 250px;
+  max-width: 406px;
+  width: 90%;
+  height: 347px;
+  padding: 20px;
+}
