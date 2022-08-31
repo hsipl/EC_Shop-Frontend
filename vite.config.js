@@ -16,6 +16,12 @@ export default defineConfig({
       ],
     }),
   ],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/setupTests.js",
+    watch: false,
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
