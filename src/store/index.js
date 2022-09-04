@@ -3,10 +3,12 @@ import {
   configureStore,
   isRejectedWithValue,
 } from "@reduxjs/toolkit";
+import { apiSlice } from "./api";
 import { loginSlice } from "./login";
 
 const reducer = combineReducers({
   login: loginSlice.reducer,
+  [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
 const errorMiddleware = (api) => (next) => (action) => {
@@ -17,7 +19,11 @@ const errorMiddleware = (api) => (next) => (action) => {
 };
 
 const middlewareHandler = (getDefaultMiddleware) => {
-  const middlewareList = [errorMiddleware, ...getDefaultMiddleware()];
+  const middlewareList = [
+    errorMiddleware,
+    apiSlice.middleware,
+    ...getDefaultMiddleware(),
+  ];
 
   return middlewareList;
 };

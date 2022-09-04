@@ -1,4 +1,9 @@
-import { selectErrors, setPassword, setUsername } from "@/store/login";
+import {
+  selectErrors,
+  setPassword,
+  setUsername,
+  useLoginMutation,
+} from "@/store/login";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Typography } from "antd";
 import React from "react";
@@ -6,15 +11,20 @@ import { useDispatch, useSelector } from "react-redux";
 import "./Login.css";
 
 export default function Login() {
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
-  };
-
   const errors = useSelector(selectErrors);
 
   const dispatch = useDispatch();
   const usernameChanged = (e) => dispatch(setUsername(e.target.value));
   const passwordChanged = (e) => dispatch(setPassword(e.target.value));
+
+  const [login] = useLoginMutation();
+
+  const onFinish = async (values) => {
+    if (!(errors.username || errors.password)) {
+      const res = await login(values);
+      console.log(res);
+    }
+  };
 
   return (
     <div className="root">
