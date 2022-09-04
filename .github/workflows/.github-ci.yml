@@ -39,5 +39,5 @@ jobs:
       - name: Show test coverage
         run: npm run coverage
 
-      - name: Build
-        run: npm run build
+      # - name: Build
+      #   run: npm run build
