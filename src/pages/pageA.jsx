@@ -1,1 +1,5 @@
-export const PageA = () => <p>PageA</p>;
+import React from "react";
+
+export default function PageA() {
+  return <p>PageA</p>;
+}
