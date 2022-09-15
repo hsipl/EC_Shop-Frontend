@@ -1,0 +1,11 @@
+.custom-image img {
+  aspect-ratio: 1/1;
+  display: block;
+  padding: 10px 10px;
+}
+.custom-card {
+  padding: 10px 16px;
+}
+.custom-card p {
+  color: #999;
+}
