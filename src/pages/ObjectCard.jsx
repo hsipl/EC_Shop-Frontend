@@ -1,10 +1,10 @@
 import { HeartTwoTone, MoreOutlined } from '@ant-design/icons'
 import { Avatar, Card } from 'antd'
 import React from 'react'
-import './ObjectCard.css'
+
 const { Meta } = Card
 export const ObjectCard = () => (
-  <Card style={{ width: 180, padding: 20 }} bodyStyle={{ padding: 20 }}>
+  <Card style={{ width: 180}} bodyStyle={{ padding: 5 }}>
     <div
       style={{
         paddingLeft: '5px',
@@ -29,13 +29,13 @@ export const ObjectCard = () => (
         src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
       />
     </div>
-    <div className="custom-card">
+    <div>
       <h5>NAME</h5>
       <h6>NT$200</h6>
-      <p>全新</p>
+      <p style={{color:'gray'}}>全新</p>
     </div>
     <div
-      style={{ display: 'flex', justifyContent: 'space-between', padding: 20 }}>
+      style={{ display: 'flex', justifyContent: 'space-between', padding: 5 }}>
       <HeartTwoTone />
       <MoreOutlined />
     </div>
