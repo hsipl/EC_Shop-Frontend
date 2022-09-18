@@ -1,4 +1,4 @@
-import { HeaderMenu } from "@/views/Header";
+import { HeaderMenu, HeaderSearch } from "@/views/Header";
 import { Layout, Typography } from "antd";
 import { Outlet } from "react-router-dom";
 
@@ -10,6 +10,7 @@ export const BasicLayout = () => {
       <Header style={{ color: "#F2F2F7" }}>
         <HeaderMenu />
       </Header>
+      <HeaderSearch />
       <Layout hasSider={true}>
         <Layout>
           <Content>
