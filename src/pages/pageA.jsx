@@ -7,11 +7,6 @@ import Column from 'antd/lib/table/Column'
 export default function PageA() {
   return (
     <div>
-      <div style={{ display: 'flexBox', flexDirection: 'row' }}>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-      </div>
       <BigCarousel />
       <h2>探索Carousell</h2>
       <SamllCarousel />

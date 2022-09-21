@@ -13,14 +13,14 @@ export const SamllCarousel = () => {
   }
   const ref = useRef()
   return (
-    <div>
+    <div style={{ display: 'flex ', flexDirection: 'row' ,justifyContent:'center' ,alignItems:'center'}}>
       <LeftOutlined
         style={{ fontSize: '32px' }}
         onClick={() => {
           ref.current.prev()
         }}
       />
-      <Carousel dots={false} draggable slidesToShow={4} ref={ref}>
+      <Carousel dots={false} draggable slidesToShow={4} ref={ref} style={{width:1000}}>
         <div>
           <h3 style={contentStyle}>1</h3>
         </div>
