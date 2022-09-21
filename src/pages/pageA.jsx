@@ -1,33 +1,24 @@
-import { ObjectCard } from './ObjectCard'
-import { BigCarousel } from './BigCarousel'
-import { SamllCarousel } from './SmallCarousel'
-import { data } from './data'
-
-import { List } from 'antd'
+import { BigCarousel } from '../views/BigCarousel'
+import { SamllCarousel } from '../views/SmallCarousel'
+import { Recommend } from '../views/Recommend'
+import { DailyPicks } from '../views/DailyPicks'
+import Column from 'antd/lib/table/Column'
 
 export default function PageA() {
   return (
     <div>
+      <div style={{ display: 'flexBox', flexDirection: 'row' }}>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
       <BigCarousel />
       <h2>探索Carousell</h2>
       <SamllCarousel />
-      <List
-        grid={{
-          gutter: 16,
-          xs: 1,
-          sm: 2,
-          md: 4,
-          lg: 4,
-          xl: 4,
-          xxl: 3,
-        }}
-        dataSource={data}
-        renderItem={(item) => (
-          <List.Item>
-            <ObjectCard />
-          </List.Item>
-        )}
-      />
+      <h2>你的每日精選</h2>
+      <DailyPicks />
+      <h2>為你推薦</h2>
+      <Recommend />
     </div>
   )
 }
