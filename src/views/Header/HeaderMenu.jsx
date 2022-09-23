@@ -9,6 +9,8 @@ export const HeaderMenu = () => {
         display: "grid",
         flex: "1",
         gridTemplateColumns: "auto auto",
+        paddingLeft: "calc((100vw - 1440px)/2 + 64px)",
+        paddingRight: "calc((100vw - 1440px)/2 + 64px)",
       }}
     >
       <div

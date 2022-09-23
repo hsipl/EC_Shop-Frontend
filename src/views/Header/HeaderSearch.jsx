@@ -37,6 +37,8 @@ export const HeaderSearch = () => {
         padding: "4px 64px",
         minHeight: "64px",
         backgroundColor: "rgba(240, 242, 245)", // set backgroundColor same as content
+        paddingLeft: "calc((100vw - 1440px)/2 + 64px)",
+        paddingRight: "calc((100vw - 1440px)/2 + 64px)",
       }}
     >
       <div

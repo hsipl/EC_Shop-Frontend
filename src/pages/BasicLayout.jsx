@@ -8,13 +8,18 @@ export const BasicLayout = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <div style={{ position: "fixed", width: "100%" }}>
-        <Header style={{ color: "#F2F2F7" }}>
+        <Header style={{ color: "#F2F2F7", padding: 0 }}>
           <HeaderMenu />
         </Header>
         <HeaderSearch />
       </div>
       <Layout style={{ paddingTop: "128px" }}>
-        <Content>
+        <Content
+          style={{
+            paddingLeft: "calc((100vw - 1440px)/2 + 64px)",
+            paddingRight: "calc((100vw - 1440px)/2 + 64px)",
+          }}
+        >
           <Outlet />
         </Content>
         <Footer
