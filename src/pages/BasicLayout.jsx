@@ -6,36 +6,34 @@ const { Header, Content, Footer } = Layout;
 
 export const BasicLayout = () => {
   return (
-    <Layout style={{ height: "100vh" }}>
-      <Header style={{ color: "#F2F2F7" }}>
-        <HeaderMenu />
-      </Header>
-      <HeaderSearch />
-      <Layout hasSider={true}>
-        <Layout>
-          <Content>
-            <Outlet />
-          </Content>
-          <Footer
+    <Layout style={{ minHeight: "100vh" }}>
+      <div style={{ position: "fixed", width: "100%" }}>
+        <Header style={{ color: "#F2F2F7" }}>
+          <HeaderMenu />
+        </Header>
+        <HeaderSearch />
+      </div>
+      <Layout style={{ paddingTop: "128px" }}>
+        <Content>
+          <Outlet />
+        </Content>
+        <Footer
+          style={{
+            background: "#222222",
+            height: "40px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography
             style={{
-              textAlign: "center",
-              background: "#222222",
-              height: "40px",
-              padding: 0,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              color: "#AEAEB2",
             }}
           >
-            <Typography
-              style={{
-                color: "#AEAEB2",
-              }}
-            >
-              Ant Design ©2018 Created by Ant UED
-            </Typography>
-          </Footer>
-        </Layout>
+            Ant Design ©2018 Created by Ant UED
+          </Typography>
+        </Footer>
       </Layout>
     </Layout>
   );

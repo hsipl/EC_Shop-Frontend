@@ -36,6 +36,7 @@ export const HeaderSearch = () => {
         justifyContent: "space-between",
         padding: "4px 64px",
         minHeight: "64px",
+        backgroundColor: "rgba(240, 242, 245)", // set backgroundColor same as content
       }}
     >
       <div
