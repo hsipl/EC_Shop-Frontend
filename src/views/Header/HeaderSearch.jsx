@@ -1,6 +1,7 @@
 import { DownOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Input, Menu, Space, Typography } from "antd";
 import React from "react";
+import "./Header.css";
 
 const menu = () => {
   const handleMenuClick = (e) => {
@@ -27,28 +28,8 @@ export const HeaderSearch = () => {
   const onSearch = (value) => console.log(value);
 
   return (
-    <div
-      style={{
-        position: "relative",
-        display: "flex",
-        flexFlow: "row nowrap",
-        alignItems: "stretch",
-        justifyContent: "space-between",
-        padding: "4px 64px",
-        minHeight: "64px",
-        backgroundColor: "rgba(240, 242, 245)", // set backgroundColor same as content
-        paddingLeft: "calc((100vw - 1440px)/2 + 64px)",
-        paddingRight: "calc((100vw - 1440px)/2 + 64px)",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flex: 1,
-          flexGrow: "row nowrap",
-          alignItems: "center",
-        }}
-      >
+    <div className="header-search">
+      <div className="header-search-logo">
         <div>
           <Typography.Title
             level={3}
@@ -57,15 +38,7 @@ export const HeaderSearch = () => {
             HSIPLSELL
           </Typography.Title>
         </div>
-        <div
-          style={{
-            maxWidth: "1200px",
-            position: "relative",
-            display: "flex",
-            flex: 1,
-            margin: "0px 48px",
-          }}
-        >
+        <div className="header-search-product-dropdown">
           <Dropdown overlay={menu}>
             <Button>
               <Space>
@@ -81,7 +54,7 @@ export const HeaderSearch = () => {
           />
         </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="header-search-sell-button">
         <Button>
           <Space>出售</Space>
         </Button>

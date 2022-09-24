@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { Dropdown, Menu } from "antd";
 import React from "react";
+import "./Header.css";
 
 const rightMenus = [
   {
@@ -45,19 +46,7 @@ export const RightMenu = () => {
   return (
     <>
       <Dropdown overlay={userMenus}>
-        <a
-          onClick={(e) => e.preventDefault()}
-          style={{
-            position: "relative",
-            display: "flex",
-            flexGrow: 0,
-            flexShrink: 0,
-            flexBasis: "auto",
-            alignItems: "center",
-            padding: "0 12px",
-            cursor: "pointer",
-          }}
-        >
+        <a onClick={(e) => e.preventDefault()} className="right-menu-dropdown">
           Hi, Yuchi
         </a>
       </Dropdown>
