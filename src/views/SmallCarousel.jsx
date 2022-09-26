@@ -1,26 +1,25 @@
-import { Carousel } from 'antd'
-import React from 'react'
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
-import { useRef } from 'react'
+import { Carousel } from "antd";
+import React from "react";
+import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
+import { useRef } from "react";
+
+const contentStyle = {
+  aspectRatio: "1/1",
+  color: "#fff",
+  lineHeight: "80px",
+  textAlign: "center",
+  background: "#364d79",
+  borderRadius: "10px",
+  margin: "10px",
+};
 
 export const SamllCarousel = () => {
-  const contentStyle = {
-    height: '80px',
-    color: '#fff',
-    lineHeight: '80px',
-    textAlign: 'center',
-    background: '#364d79',
-  }
-  const ref = useRef()
+  const ref = useRef();
+  const rightArror = () => ref.current.next();
+  const leftArror = () => ref.current.prev();
   return (
-    <div style={{ display: 'flex ', flexDirection: 'row' ,justifyContent:'center' ,alignItems:'center'}}>
-      <LeftOutlined
-        style={{ fontSize: '32px' }}
-        onClick={() => {
-          ref.current.prev()
-        }}
-      />
-      <Carousel dots={false} draggable slidesToShow={4} ref={ref} style={{width:1000}}>
+    <div style={{ position: "relative" }}>
+      <Carousel dots={false} slidesToShow={8} ref={ref}>
         <div>
           <h3 style={contentStyle}>1</h3>
         </div>
@@ -48,13 +47,52 @@ export const SamllCarousel = () => {
         <div>
           <h3 style={contentStyle}>9</h3>
         </div>
+        <div>
+          <h3 style={contentStyle}>10</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>11</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>12</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>13</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>14</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>15</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>16</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>17</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>18</h3>
+        </div>
       </Carousel>
-      <RightOutlined
-        style={{ fontSize: '32px' }}
-        onClick={() => {
-          ref.current.next()
+      <LeftCircleOutlined
+        style={{
+          fontSize: "40px",
+          position: "absolute",
+          left: "-10px",
+          top: "38%",
         }}
+        onClick={leftArror}
+      />
+      <RightCircleOutlined
+        style={{
+          fontSize: "40px",
+          position: "absolute",
+          right: "-10px",
+          top: "38%",
+        }}
+        onClick={rightArror}
       />
     </div>
-  )
-}
+  );
+};

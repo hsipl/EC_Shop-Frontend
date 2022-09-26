@@ -1,22 +1,22 @@
-import { ObjectCard } from '../components/ObjectCard'
-import { data } from '../assets/data'
+import { ObjectCard } from "../components/ObjectCard";
+import { data } from "../assets/data";
 
-import { Carousel } from 'antd'
-import React from 'react'
-import { LeftOutlined, RightOutlined } from '@ant-design/icons'
-import { useRef } from 'react'
+import { Carousel } from "antd";
+import React from "react";
+import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
+import { useRef } from "react";
 
 export const DailyPicks = () => {
-  const ref = useRef()
+  const ref = useRef();
+  const rightArror = () => ref.current.next();
+  const leftArror = () => ref.current.prev();
   return (
-    <div style={{ display: 'flex ', flexDirection: 'row' ,justifyContent:'center' ,alignItems:'center',}}>
-      <LeftOutlined
-        style={{ fontSize: '32px' }}
-        onClick={() => {
-          ref.current.prev()
-        }}
-      />
-      <Carousel dots={false} draggable slidesToShow={4} ref={ref} style={{width:1000}}>
+    <div
+      style={{
+        position: "relative",
+      }}
+    >
+      <Carousel dots={false} slidesToShow={5} ref={ref} style={{}}>
         <ObjectCard />
         <ObjectCard />
         <ObjectCard />
@@ -27,12 +27,24 @@ export const DailyPicks = () => {
         <ObjectCard />
         <ObjectCard />
       </Carousel>
-      <RightOutlined
-        style={{ fontSize: '32px' }}
-        onClick={() => {
-          ref.current.next()
+      <RightCircleOutlined
+        style={{
+          fontSize: "32px",
+          position: "absolute",
+          right: "-10px",
+          top: "150px",
         }}
+        onClick={rightArror}
+      />
+      <LeftCircleOutlined
+        style={{
+          fontSize: "32px",
+          position: "absolute",
+          left: "-10px",
+          top: "150px",
+        }}
+        onClick={leftArror}
       />
     </div>
-  )
-}
+  );
+};
