@@ -3,7 +3,7 @@ import { Avatar, Card } from "antd";
 import React from "react";
 
 const { Meta } = Card;
-export const ObjectCard = () => (
+export const ObjectCard = (props) => (
   <Card style={{ width: 180 }} bodyStyle={{ padding: 5 }}>
     <div
       style={{
@@ -15,8 +15,8 @@ export const ObjectCard = () => (
     >
       <Avatar src="https://joeschmoe.io/api/v1/random" />
       <div>
-        <div style={{ fontSize: "5px" }}>ID</div>
-        <div style={{ color: "#999" }}>Time</div>
+        <div style={{ fontSize: "5px" }}>{props.id}</div>
+        <div style={{ color: "#999" }}>{props.time}</div>
       </div>
     </div>
     <div>
@@ -32,9 +32,9 @@ export const ObjectCard = () => (
       />
     </div>
     <div>
-      <h5>NAME</h5>
-      <h6>NT$200</h6>
-      <p style={{ color: "gray" }}>全新</p>
+      <h5>{props.title}</h5>
+      <h6>NT${props.money}</h6>
+      <p style={{ color: "gray" }}>{props.state}</p>
     </div>
     <div
       style={{ display: "flex", justifyContent: "space-between", padding: 5 }}

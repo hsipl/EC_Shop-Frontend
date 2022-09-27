@@ -2,7 +2,6 @@ import { BigCarousel } from "../views/BigCarousel";
 import { SamllCarousel } from "../views/SmallCarousel";
 import { Recommend } from "../views/Recommend";
 import { DailyPicks } from "../views/DailyPicks";
-import Column from "antd/lib/table/Column";
 
 export default function PageA() {
   return (

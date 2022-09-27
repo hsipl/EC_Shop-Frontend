@@ -13,7 +13,13 @@ export const Recommend = () => {
       dataSource={data}
       renderItem={(item) => (
         <List.Item>
-          <ObjectCard />
+          <ObjectCard
+            title={item.title}
+            id={item.id}
+            time={item.time}
+            money={item.money}
+            state={item.state}
+          />
         </List.Item>
       )}
     />

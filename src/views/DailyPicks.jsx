@@ -17,15 +17,16 @@ export const DailyPicks = () => {
       }}
     >
       <Carousel dots={false} slidesToShow={5} ref={ref} style={{}}>
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
-        <ObjectCard />
+        {data.map((item) => (
+          <ObjectCard
+            key={item.id}
+            title={item.title}
+            id={item.id}
+            time={item.time}
+            money={item.money}
+            state={item.state}
+          />
+        ))}
       </Carousel>
       <RightCircleOutlined
         style={{
