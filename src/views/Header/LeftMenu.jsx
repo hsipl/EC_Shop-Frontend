@@ -1,5 +1,6 @@
 import { Menu } from "antd";
 import React from "react";
+import "./Header.css";
 
 const leftMenus = [
   {
@@ -34,7 +35,7 @@ export const LeftMenu = () => {
       theme="dark"
       mode="horizontal"
       items={leftMenus}
-      style={{ width: "100%" }}
+      className="left-menu"
     />
   );
 };

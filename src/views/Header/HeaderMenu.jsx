@@ -2,34 +2,15 @@ import React from "react";
 import { LeftMenu } from "./LeftMenu";
 import { RightMenu } from "./RightMenu";
 
+import "./Header.css";
+
 export const HeaderMenu = () => {
   return (
-    <div
-      style={{
-        display: "grid",
-        flex: "1",
-        gridTemplateColumns: "auto auto",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-start",
-          overflow: "hidden",
-        }}
-      >
+    <div className="header-menu">
+      <div className="header-left">
         <LeftMenu />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          flexGrow: 1,
-          flexShrink: 1,
-          flexBasis: "240px",
-        }}
-      >
+      <div className="header-right">
         <RightMenu />
       </div>
     </div>
