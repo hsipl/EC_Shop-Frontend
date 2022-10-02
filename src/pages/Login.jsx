@@ -36,9 +36,9 @@ export default function Login() {
           help={errors.username}
         >
           <Input
-            prefix={<UserOutlined className="site-form-item-icon" />}
+            prefix={<UserOutlined />}
             placeholder="Username"
-            style={{ borderRadius: "5px" }}
+            className="form-input"
             onChange={usernameChanged}
           />
         </Form.Item>
@@ -48,35 +48,19 @@ export default function Login() {
           help={errors.password}
         >
           <Input
-            prefix={<LockOutlined className="site-form-item-icon" />}
+            prefix={<LockOutlined />}
             type="password"
             placeholder="Password"
-            style={{ borderRadius: "5px" }}
+            className="form-input"
             onChange={passwordChanged}
           />
         </Form.Item>
         <div style={{ width: "100%", textAlign: "right" }}>
-          <a className="login-form-forgot" href="">
-            Forgot password?
-          </a>
+          <a href="">Forgot password?</a>
         </div>
 
         <Form.Item>
-          <Button
-            type="primary"
-            htmlType="Login"
-            className="login-form-button"
-            style={{
-              maxWidth: "406px",
-              width: "100%",
-              height: "32px",
-              borderRadius: "10px",
-              borderColor: "#20DF7F",
-              background: "#20DF7F",
-              color: "#fff",
-              marginTop: "10px",
-            }}
-          >
+          <Button type="primary" htmlType="Login" className="login-button">
             Log in
           </Button>
         </Form.Item>
