@@ -1,4 +1,4 @@
-import { MyCarousel } from "@/components/myCarousel";
+import { MyCarousel } from "@/components/MyCarousel";
 import { data } from "@/assets/homepageData";
 
 import React from "react";
