@@ -1,0 +1,19 @@
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  font-size: 50px;
+  margin-top: 0px;
+  top: calc(50% - 25px);
+  color: currentColor;
+  left: -20px;
+  z-index: 2;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  font-size: 50px;
+  margin-top: 0px;
+  top: calc(50% - 25px);
+  color: currentColor;
+  right: -20px;
+  z-index: 2;
+}
