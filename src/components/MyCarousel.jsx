@@ -1,37 +1,41 @@
 import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import React from "react";
+import PropTypes from 'prop-types';
 
 import "./MyCarousel.css";
 
-const contentStyle = {
-  height: "250px",
-  color: "#fff",
-  lineHeight: "250px",
-  textAlign: "center",
-  background: "#364d79",
-  borderRadius: "10px",
-  margin: "5px",
-};
 
 export const MyCarousel = (props) => {
-  const carouselRef = React.useRef(); //1.宣告一個ref物件
-
+  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+    <LeftCircleOutlined
+      {...props}
+    />
+  );
+  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+    <RightCircleOutlined
+      {...props}
+    />
+  );
   return (
     <div>
       <div>
         <Carousel
           arrows
-          nextArrow={<RightCircleOutlined />}
-          prevArrow={<LeftCircleOutlined />}
+          nextArrow={<SlickArrowRight />}
+          prevArrow={<SlickArrowLeft />}
           dots={false}
           draggable
           slidesToShow={props.shownums}
         >
-          {/*2.將ref物件指向Carousel*/}
           {props.views}
         </Carousel>
       </div>
     </div>
   );
 };
+
+MyCarousel.propTypes={
+  shownums: PropTypes.number,
+  views: PropTypes.array
+}

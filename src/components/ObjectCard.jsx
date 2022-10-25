@@ -1,6 +1,7 @@
 import { HeartTwoTone, MoreOutlined } from "@ant-design/icons";
 import { Avatar, Card } from "antd";
 import React from "react";
+import PropTypes from 'prop-types';
 
 export const ObjectCard = (props) => (
   <Card style={{ width: props.width }} bodyStyle={{ padding: 5 }}>
@@ -43,3 +44,12 @@ export const ObjectCard = (props) => (
     </div>
   </Card>
 );
+
+ObjectCard.propTypes  = {
+  width:PropTypes.number,
+  title: PropTypes.string,
+  id: PropTypes.number,
+  time: PropTypes.string,
+  momey: PropTypes.string,
+  state: PropTypes.string,
+}

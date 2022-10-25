@@ -1,12 +1,11 @@
-import { BigCarousel } from "@/views/BigCarousel";
-import { SamllCarousel } from "@/views/SmallCarousel";
-import { Recommend } from "@/views/Recommend";
-import { DailyPicks } from "@/views/DailyPicks";
+import { BigCarousel } from "@/views/Homepage/BigCarousel";
+import { SamllCarousel } from "@/views/Homepage/SmallCarousel";
+import { Recommend } from "@/views/Homepage/Recommend";
+import { DailyPicks } from "@/views/Homepage/DailyPicks";
 
 export default function PageA() {
   return (
     <div>
-      <div>123</div>
       <div
         style={{
           width: "90%",
