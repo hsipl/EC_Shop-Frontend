@@ -1,5 +1,6 @@
 .header-menu {
   display: grid;
+  height: inherit;
   flex: 1;
   grid-template-columns: auto auto;
   padding-left: calc((100vw - 1440px) / 2 + 64px);
@@ -19,6 +20,7 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 240px;
+  height: inherit;
 }
 
 .left-menu {
@@ -68,4 +70,24 @@
 .header-search-sell-button {
   display: flex;
   align-items: center;
+}
+
+.header-dropdown-menu {
+  height: 320px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 3px 10px 0 rgb(44 44 45 / 7%),
+    inset 0 0 0 1px rgb(44 44 45 / 7%);
+  padding: 15px;
+  padding-left: calc((100vw - 1440px) / 2 + 64px);
+  padding-right: calc((100vw - 1440px) / 2 + 64px);
+}
+
+.ant-menu-item-selected {
+  background-color: inherit !important;
+}
+
+.ant-menu-item:hover {
+  background-color: #3f4042 !important;
 }

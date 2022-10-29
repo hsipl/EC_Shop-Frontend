@@ -1,5 +1,7 @@
+import { setMenuKey } from "@/store/header";
 import { Menu } from "antd";
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./Header.css";
 
 const leftMenus = [
@@ -30,12 +32,14 @@ const leftMenus = [
 ];
 
 export const LeftMenu = () => {
+  const dispatch = useDispatch();
   return (
     <Menu
       theme="dark"
       mode="horizontal"
       items={leftMenus}
       className="left-menu"
+      onClick={({ key }) => dispatch(setMenuKey(key))}
     />
   );
 };

@@ -1,18 +1,24 @@
-import { HeaderMenu, HeaderSearch } from "@/views/Header";
+import { DropdownMenu, HeaderMenu, HeaderSearch } from "@/views/Header";
 import { Layout, Typography } from "antd";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 
 const { Header, Content, Footer } = Layout;
 
 export const BasicLayout = () => {
+  const { menuKey } = useSelector((state) => state.header);
+
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <div style={{ position: "fixed", width: "100%" }}>
-        <Header style={{ color: "#F2F2F7", padding: 0 }}>
+        <Header style={{ color: "#F2F2F7", padding: 0, height: "40px" }}>
           <HeaderMenu />
+          {menuKey > 0 && <DropdownMenu />}
         </Header>
         <HeaderSearch />
       </div>
+
       <Layout style={{ paddingTop: "128px" }}>
         <Content
           style={{

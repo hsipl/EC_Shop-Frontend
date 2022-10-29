@@ -4,10 +4,12 @@ import {
   isRejectedWithValue,
 } from "@reduxjs/toolkit";
 import { apiSlice } from "./api";
+import { headerSlice } from "./header";
 import { loginSlice } from "./login";
 
 const reducer = combineReducers({
   login: loginSlice.reducer,
+  header: headerSlice.reducer,
   [apiSlice.reducerPath]: apiSlice.reducer,
 });
 
