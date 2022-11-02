@@ -8,7 +8,6 @@ export const DailyPicks = () => {
   const views = data.map((item) => (
     <ObjectCard
       key={item.id}
-      width={180}
       title={item.title}
       id={item.id}
       time={item.time}

@@ -15,7 +15,6 @@ export const Recommend = () => {
         <List.Item>
           <ObjectCard
             key={item.id}
-            width={220}
             title={item.title}
             id={item.id}
             time={item.time}

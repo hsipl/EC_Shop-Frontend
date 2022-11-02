@@ -3,6 +3,8 @@ import { SamllCarousel } from "@/views/Homepage/SmallCarousel";
 import { Recommend } from "@/views/Homepage/Recommend";
 import { DailyPicks } from "@/views/Homepage/DailyPicks";
 
+import React from "react";
+
 export default function PageA() {
   return (
     <div>

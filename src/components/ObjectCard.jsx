@@ -1,10 +1,10 @@
 import { HeartTwoTone, MoreOutlined } from "@ant-design/icons";
 import { Avatar, Card } from "antd";
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export const ObjectCard = (props) => (
-  <Card style={{ width: props.width }} bodyStyle={{ padding: 5 }}>
+  <Card style={{ width: "100%", padding: "5%" }} bodyStyle={{ padding: 5 }}>
     <div
       style={{
         paddingLeft: "5px",
@@ -45,11 +45,11 @@ export const ObjectCard = (props) => (
   </Card>
 );
 
-ObjectCard.propTypes  = {
-  width:PropTypes.number,
+ObjectCard.propTypes = {
+  width: PropTypes.number,
   title: PropTypes.string,
   id: PropTypes.number,
   time: PropTypes.string,
   momey: PropTypes.string,
   state: PropTypes.string,
-}
+};
