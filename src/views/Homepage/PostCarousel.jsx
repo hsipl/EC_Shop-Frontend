@@ -13,7 +13,7 @@ const contentStyle = {
   margin: "5px",
 };
 
-export const BigCarousel = () => {
+export const PostCarousel = () => {
   const views = data.map((item) => (
     <div key={item.id}>
       <h3 style={contentStyle}>{item.id}</h3>

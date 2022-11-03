@@ -1,5 +1,5 @@
-import { BigCarousel } from "@/views/Homepage/BigCarousel";
-import { SamllCarousel } from "@/views/Homepage/SmallCarousel";
+import { PostCarousel } from "@/views/Homepage/PostCarousel";
+import { ExploreCarousel } from "@/views/Homepage/ExploreCarousel";
 import { Recommend } from "@/views/Homepage/Recommend";
 import { DailyPicks } from "@/views/Homepage/DailyPicks";
 
@@ -14,9 +14,9 @@ export default function PageA() {
           margin: "auto",
         }}
       >
-        <BigCarousel />
+        <PostCarousel />
         <h2>探索Carousell</h2>
-        <SamllCarousel />
+        <ExploreCarousel />
         <h2>你的每日精選</h2>
         <DailyPicks />
         <h2>為你推薦</h2>
