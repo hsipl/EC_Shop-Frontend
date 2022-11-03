@@ -21,11 +21,16 @@ export const MyCarousel = (props) => {
           dots={false}
           draggable // 拖曳
           slidesToShow={props.shownums}
+          slidesToScroll={props.scroll}
         >
-          {/*2.將ref物件指向Carousel*/}
           {props.views}
         </Carousel>
       </div>
     </div>
   );
+};
+
+MyCarousel.propTypes = {
+  shownums: PropTypes.number,
+  views: PropTypes.array,
 };

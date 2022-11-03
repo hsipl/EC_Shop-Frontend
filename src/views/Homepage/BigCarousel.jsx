@@ -19,5 +19,5 @@ export const BigCarousel = () => {
       <h3 style={contentStyle}>{item.id}</h3>
     </div>
   ));
-  return <MyCarousel views={views} shownums={2} />;
+  return <MyCarousel views={views} shownums={2} scroll={1}/>;
 };

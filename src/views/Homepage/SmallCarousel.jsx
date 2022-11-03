@@ -19,5 +19,5 @@ export const SamllCarousel = () => {
       <h3 style={contentStyle}>{item.id}</h3>
     </div>
   ));
-  return <MyCarousel views={views} shownums={8} />;
+  return <MyCarousel views={views} shownums={8} scroll={8}/>;
 };

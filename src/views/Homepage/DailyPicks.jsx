@@ -16,5 +16,5 @@ export const DailyPicks = () => {
     />
   ));
 
-  return <MyCarousel views={views} shownums={5} />;
+  return <MyCarousel views={views} shownums={5} scroll={5}/>;
 };
