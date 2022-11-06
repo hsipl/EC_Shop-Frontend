@@ -5,9 +5,19 @@ import PropTypes from "prop-types";
 import "./MyCarousel.css";
 
 export const MyCarousel = (props) => {
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <LeftCircleOutlined {...props} />
-  );
+  const SlickArrowLeft = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <LeftCircleOutlined
+        className={className}
+        style={{ ...style }}
+        onClick={onClick}
+      />
+    );
+  };
+  // const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+  //   <LeftCircleOutlined {...props} />
+  // );
   const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
     <RightCircleOutlined {...props} />
   );
@@ -19,7 +29,8 @@ export const MyCarousel = (props) => {
           nextArrow={<SlickArrowRight />}
           prevArrow={<SlickArrowLeft />}
           dots={false}
-          draggable // 拖曳
+          infinite={false}
+          //draggable // 拖曳
           slidesToShow={props.shownums}
           slidesToScroll={props.scroll}
         >

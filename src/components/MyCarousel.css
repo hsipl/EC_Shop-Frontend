@@ -25,7 +25,14 @@
   right: -20px;
   z-index: 2;
 }
+.ant-carousel .slick-next.slick-disabled {
+  z-index: -1;
+}
+.ant-carousel .slick-prev.slick-disabled {
+  z-index: -1;
+}
 
 .ant-carousel .slick-list .slick-slide.slick-active {
   padding: 5px;
 }
+
