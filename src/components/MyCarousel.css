@@ -1,0 +1,38 @@
+.ant-carousel .slick-prev,
+.ant-carousel .slick-prev:hover {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  margin-top: 0px;
+  top: calc(50% - 25px);
+  color: gray;
+  background-color: white;
+  border-radius: 50px;
+  left: -20px;
+  z-index: 2;
+}
+
+.ant-carousel .slick-next,
+.ant-carousel .slick-next:hover {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  margin-top: 0px;
+  top: calc(50% - 25px);
+  color: gray;
+  background-color: white;
+  border-radius: 50px;
+  right: -20px;
+  z-index: 2;
+}
+.ant-carousel .slick-next.slick-disabled {
+  z-index: -1;
+}
+.ant-carousel .slick-prev.slick-disabled {
+  z-index: -1;
+}
+
+.ant-carousel .slick-list .slick-slide.slick-active {
+  padding: 5px;
+}
+

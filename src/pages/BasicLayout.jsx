@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout;
 export const BasicLayout = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <div style={{ position: "fixed", width: "100%" }}>
+      <div style={{ position: "fixed", width: "100%", zIndex: "1000" }}>
         <Header style={{ color: "#F2F2F7", padding: 0 }}>
           <HeaderMenu />
         </Header>
