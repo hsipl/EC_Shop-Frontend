@@ -55,6 +55,11 @@ export const RightMenu = () => {
         mode="horizontal"
         defaultSelectedKeys={[1]}
         items={rightMenus}
+        style={{
+          height: "inherit",
+          display: "flex",
+          alignItems: "center",
+        }}
       />
     </>
   );
