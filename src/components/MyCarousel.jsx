@@ -2,32 +2,35 @@ import { RightCircleOutlined, LeftCircleOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import React from "react";
 import PropTypes from "prop-types";
-import "./MyCarousel.css";
+import "@/components/MyCarousel.css";
+
+const PreviousBtn = (props) => {
+  // console.log(props);
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <LeftCircleOutlined style={{ color: "gray", fontSize: "30px",backgroundColor:"white",borderRadius:"50px",opacity:"0.7", }} />
+    </div>
+  );
+};
+const NextBtn = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <RightCircleOutlined style={{ color: "gray", fontSize: "30px",backgroundColor:"white",borderRadius:"50px",opacity:"0.7",}} />
+    </div>
+  );
+};
+
 
 export const MyCarousel = (props) => {
-  const SlickArrowLeft = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <LeftCircleOutlined
-        className={className}
-        style={{ ...style }}
-        onClick={onClick}
-      />
-    );
-  };
-  // const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-  //   <LeftCircleOutlined {...props} />
-  // );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <RightCircleOutlined {...props} />
-  );
   return (
     <div>
       <div>
         <Carousel
           arrows
-          nextArrow={<SlickArrowRight />}
-          prevArrow={<SlickArrowLeft />}
+          prevArrow={<PreviousBtn />}
+          nextArrow={<NextBtn />}
           dots={false}
           infinite={false}
           //draggable // 拖曳
